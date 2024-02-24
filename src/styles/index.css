@@ -47,3 +47,15 @@
   box-sizing: border-box;
   font-family: 'Inter';
 }
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.text-gradient {
+  background: var(--text-gradient-background);
+  background: var(--text-gradient-background-lg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
