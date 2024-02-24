@@ -9,9 +9,9 @@ export const routes = [
         path: '/',
         element: <AyudalosApp />,
         errorElement: <ErrorPage />,
-        childre: [
+        children: [
             {
-                path: '',
+                path: '/',
                 element: <LandingPage />
             },
             {
