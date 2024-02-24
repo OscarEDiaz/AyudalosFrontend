@@ -1,9 +1,9 @@
-import React from 'react'
+// import { Outlet } from 'react-router-dom';
 
 export const AyudalosApp = () => {
     return (
         <main>
-            Main
+            <Outlet />
         </main>
     )
 }
