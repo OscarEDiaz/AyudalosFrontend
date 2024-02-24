@@ -4,8 +4,6 @@ import Heart from '../../../public/assets/icons/heart-solid.svg?react';
 import '../../styles/navbar/navbar.css';
 
 export const Navbar = () => {
-    
-
     return (
         <nav className='navbar-main-frame'>
             <div className="navbar-items">
@@ -13,10 +11,22 @@ export const Navbar = () => {
                     Ayúdalos <Heart className='heart-icon'/>
                 </p>
                 <ul className="navbar-items-list">
-                    <NavLink to={'/'} className="navbar-item">Inicio</NavLink> 
-                    <NavLink to={'/'} className="navbar-item">Sobre Nosotros</NavLink> 
-                    <NavLink to={'/'} className="navbar-item">Catálogo</NavLink> 
-                    <NavLink to={'/'} className="navbar-item">Registro</NavLink> 
+                    <NavLink 
+                        to={'/'} 
+                        className={({isActive}) => `navbar-item ${isActive ? 'navbar-item-active' : ''}`} 
+                    >Inicio</NavLink> 
+                    <NavLink 
+                        to={'/informacion'} 
+                        className={({isActive}) => `navbar-item ${isActive ? 'navbar-item-active' : ''}`} 
+                    >Sobre Nosotros</NavLink> 
+                    <NavLink 
+                        to={'/catalogo'} 
+                        className={({isActive}) => `navbar-item ${isActive ? 'navbar-item-active' : ''}`} 
+                    >Catálogo</NavLink> 
+                    <NavLink 
+                        to={'/registro'} 
+                        className={({isActive}) => `navbar-item ${isActive ? 'navbar-item-active' : ''}`} 
+                    >Registro</NavLink> 
                 </ul>
             </div>
         </nav>
