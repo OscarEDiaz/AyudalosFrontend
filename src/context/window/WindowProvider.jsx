@@ -1,13 +1,12 @@
-import { useState, useEffect } from "react"
-import { WindowContext } from "./WindowContext"
+import { useEffect, useState } from "react"
+import { WindowContext } from "./WindowContext";
 
 export const WindowProvider = ({ children }) => {
     const [scrollY, setScrollY] = useState(0);
 
     const onWindowScroll = () => {
-        let newScrollY = window.scrollY;
-
-        setScrollY(newScrollY);
+        const windowScrollY = window.scrollY;
+        setScrollY(windowScrollY);
     }
 
     useEffect(() => {
