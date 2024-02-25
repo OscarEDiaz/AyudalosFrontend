@@ -33,14 +33,6 @@
     font-size: var(--header-1-fs);
 }
 
-.text-gradient {
-    background: var(--text-gradient-background);
-    background: var(--text-gradient-background-lg);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .hand-icon {
     height: 72px;
     fill: var(--primary-color);

@@ -1,6 +1,11 @@
 .navbar-main-frame {
     width: 100%;
     padding: 15px 50px 15px 50px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 99;
 }
 
 .navbar-items {
@@ -33,8 +38,15 @@
     font-size: var(--paragraph-fs);
     font-weight: var(--paragraph-fw);
     color: var(--navbar-link-unactive);
+    transition: all 1s ease;
 }
 
 .navbar-item-active {
-    color: var(--navbar-link-active);
+    animation: link-active 0.5s ease forwards;
+}
+
+@keyframes link-active {
+    100% {
+        color: var(--primary-color);
+    }
 }
