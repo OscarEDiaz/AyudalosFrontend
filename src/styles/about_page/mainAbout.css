@@ -53,6 +53,8 @@
     animation: angle-animation 1.5s linear infinite;
 }
 
+
+
 @keyframes icon-animation {
     100% {
         top: 100%;
