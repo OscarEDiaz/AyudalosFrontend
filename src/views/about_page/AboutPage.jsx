@@ -2,10 +2,10 @@ import { useContext } from 'react';
 
 import { NavbarContext } from '../../context/navbar/NavbarContext';
 import { Navbar } from '../../components/navbar/Navbar';
-import { MainAbout } from './MainAbout';
+import { MainAbout, OrganizationPerks } from './index.js';
 
 import '../../styles/about_page/aboutPage.css';
-import { DonateAbout } from './DonateAbout';
+import { DonorPerks } from './DonorPerks';
 
 export const AboutPage = () => {
     const { navbarSize } = useContext(NavbarContext);
@@ -20,12 +20,26 @@ export const AboutPage = () => {
                     {
                         'height': `${navbarSize.height}px`, 
                         'width': `${navbarSize.width}px`,
+                        'zIndex': 3,
                         'backgroundColor': '#fff'
                     }
                 }
             >
             </div>
-            <DonateAbout navbarSize={navbarSize} />
+            <OrganizationPerks navbarSize={navbarSize} />
+            <div 
+                className="divisor" 
+                style={
+                    {
+                        'height': `${navbarSize.height}px`, 
+                        'width': `${navbarSize.width}px`,
+                        'zIndex': 3,
+                        'backgroundColor': '#fff'
+                    }
+                }
+            >
+            </div>
+            <DonorPerks navbarSize={navbarSize} />
         </div>
     )
 }
