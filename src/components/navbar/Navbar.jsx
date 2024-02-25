@@ -23,6 +23,7 @@ export const Navbar = () => {
                 <p className='navbar-logo'>
                     Ayúdalos <Heart className='heart-icon' />
                 </p>
+                <p>Page under construction</p>
                 <ul className="navbar-items-list">
                     <NavLink
                         to={'/'}
@@ -39,12 +40,14 @@ export const Navbar = () => {
                     <NavLink
                         to={'/catalog'}
                         className={({ isActive }) => `navbar-item ${isActive ? 'navbar-item-active' : ''}`}
+                        onClick={(e) => e.preventDefault()}                   
                     >
                         Catálogo
                     </NavLink>
                     <NavLink
                         to={'/register'}
                         className={({ isActive }) => `navbar-item ${isActive ? 'navbar-item-active' : ''}`}
+                        onClick={(e) => e.preventDefault()}
                     >
                         Registro
                     </NavLink>
