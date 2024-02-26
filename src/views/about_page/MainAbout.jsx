@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import Heart from '../../../public/assets/icons/heart-solid.svg?react';
 import AngleDown from '../../../public/assets/icons/angle-down-solid.svg?react';
 
-import { Animation } from './Animation';
+import { Animation } from './index.js';
 
 import '../../styles/about_page/mainAbout.css';
 
