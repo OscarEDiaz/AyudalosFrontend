@@ -1,0 +1,52 @@
+.navbar-main-frame {
+    width: 100%;
+    padding: 15px 50px 15px 50px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 99;
+}
+
+.navbar-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-logo {
+    font-weight: var(--paragraph-fw);
+}
+
+.heart-icon {
+    height: 15px;
+    position: relative;
+    top: 2px;
+    fill: var(--primary-color);
+}
+
+.navbar-items-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 489px;
+}
+
+.navbar-item {
+    text-decoration: none;
+    font-size: var(--paragraph-fs);
+    font-weight: var(--paragraph-fw);
+    color: var(--navbar-link-unactive);
+    transition: all 1s ease;
+}
+
+.navbar-item-active {
+    animation: link-active 0.5s ease forwards;
+}
+
+@keyframes link-active {
+    100% {
+        color: var(--primary-color);
+    }
+}
