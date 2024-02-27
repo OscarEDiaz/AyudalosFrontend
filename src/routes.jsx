@@ -3,6 +3,7 @@ import { ErrorPage } from "./components/error_page/ErrorPage";
 import { AboutPage } from "./views/about_page/AboutPage";
 import { CatalogPage } from "./views/catalog_page/CatalogPage";
 import { LandingPage } from "./views/landing_page/LandingPage";
+import { RegisterPage } from "./views/register_page/RegisterPage"
 
 export const routes = [
     {
@@ -21,6 +22,10 @@ export const routes = [
             {
                 path: '/about',
                 element: <AboutPage />
+            },
+            {
+                path:'/register',
+                element: <RegisterPage />
             }
         ]
     }

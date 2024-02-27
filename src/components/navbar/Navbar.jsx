@@ -47,7 +47,6 @@ export const Navbar = () => {
                     <NavLink
                         to={'/register'}
                         className={({ isActive }) => `navbar-item ${isActive ? 'navbar-item-active' : ''}`}
-                        onClick={(e) => e.preventDefault()}
                     >
                         Registro
                     </NavLink>
