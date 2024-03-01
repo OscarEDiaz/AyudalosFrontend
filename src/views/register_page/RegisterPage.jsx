@@ -7,6 +7,9 @@ export const RegisterPage = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [orgName, setOrgName] = useState('');
+  const [telephone, setTelephone] = useState('');
+  const [socMedia, setSocMedia] = useState('');
 
   const handleRegister = () => {
     // Here you can perform registration logic, such as sending data to a server
@@ -21,7 +24,15 @@ export const RegisterPage = () => {
             <div className='fuckshit'>
                 <form>
                     <div>
-                        <label>Full Name:</label>
+                        <label>Nombre de la Organización:</label>
+                        <input
+                            type="text"
+                            value={orgName}
+                            onChange={(e) => setSocMedia(e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <label>Nombre del Representante:</label>
                         <input
                             type="text"
                             value={fullName}
@@ -29,19 +40,27 @@ export const RegisterPage = () => {
                         />
                     </div>
                     <div>
-                        <label>Email:</label>
+                        <label>Correo Electrónico:</label>
                         <input
-                            type="email"
+                            type="text"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>
                     <div>
-                        <label>Password:</label>
+                        <label>Telefono:</label>
                         <input
-                            type="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            type="text"
+                            value={telephone}
+                            onChange={(e) => setTelephone(e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <label>Red social:</label>
+                        <input
+                            type="email"
+                            value={socMedia}
+                            onChange={(e) => setSocMedia(e.target.value)}
                         />
                     </div>
                     <button type="button" onClick={handleRegister}>
