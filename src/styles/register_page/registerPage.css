@@ -6,11 +6,47 @@
 }
 
 .fuckshit {
-    background-color: grey;
+    background-color: white;
     width:50%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+}
+
+.Register-h1 {
+    font-size: var(--header-1-fs)
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.Register-btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    width: 330px;
+    height: 48px;
+    background-color: var(--primary-color);
+    font-size: var(--header-3-fs);
+    font-weight: var(--header-3-fw);
+    color: #fff;
+    transition: all 0.5s ease;
+    margin-top: auto;
+}
+
+.Register-btn:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
