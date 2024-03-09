@@ -24,7 +24,7 @@ export const Filter = () => {
                         <button className="filter-selector">Organización</button>
                     </div>
                     <div className="filters">
-                        { test.map((tagName) => <FilterSelector tagName={tagName} />) }
+                        { test.map((tagName, i) => <FilterSelector key={i} tagName={tagName} />) }
                     </div>
                 </div>
             </div>

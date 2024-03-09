@@ -17,7 +17,7 @@ export const IniciativeCard = ({ name }) => {
             </div>
             <p className="iniciative-summary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste magni provident labore, nobis recusandae aliquid, omnis repudiandae soluta quae, porro consectetur. Voluptates voluptas eveniet dicta harum asperiores adipisci ex animi.</p>
             <div className="tags">
-                { tags.map((tag) => <Tag tag={tag} />) }
+                { tags.map((tag, i) => <Tag key={i} tag={tag} />) }
             </div>
         </div>
     )

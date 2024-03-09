@@ -7,10 +7,10 @@ export const IniciativeList = ({ iniciatives, filters }) => {
         <div className="iniciative-list-main-frame">
             <Filter />
             <div className="filter-tags-container">
-                { filters.map((tag) => <FilterTag tag={tag} />) }
+                { filters.map((tag, i) => <FilterTag key={i} tag={tag} />) }
             </div>
             <div className="iniciative-cards-container">
-                { iniciatives.map((title) => <IniciativeCard name={title} />) }
+                { iniciatives.map((title, i) => <IniciativeCard key={i} name={title} />) }
                 <div className="page-controller">
                     <button className="page-selector">Atras</button>
                     <p>Page</p>
