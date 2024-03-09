@@ -1,29 +1,16 @@
-import { useEffect, useState } from "react"
+import { useGet } from "../../hooks/useGet";
 import { CatalogContext } from "./CatalogContext";
 
 export const CatalogProvider = ({ children }) => {
-    const [filters, setFilters] = useState([]);
-    const [filtersAreLoading, setFiltersAreLoading] = useState(true);
-    const [iniciatives, setIniciatives] = useState([]);
-    const [iniciativesAreLoading, setIniciativesAreLoading] = useState(true);
-
-
-    useEffect(() => {
-
-        return () => {
-
-        }
-    }, [])
-
+    const { data:initiatives, dataIsLoading:initiativesAreLoading, error:initiativesError } = useGet('/getInitiatives');
 
     return (
         <CatalogContext.Provider
             value={
                 {
-                    filters,
-                    filtersAreLoading,
-                    iniciatives,
-                    iniciativesAreLoading
+                    initiatives,
+                    initiativesAreLoading,
+                    initiativesError
                 }
             }
         >
