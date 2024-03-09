@@ -1,0 +1,118 @@
+.filter-main-frame {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.filter-header-wrapper {
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
+    display: flex;
+}
+
+.filter-toggle {
+    width: 80px;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid var(--main-border-color);
+    background-color: #fff;
+    color: var(--header-3-sbtl-c);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-toggle:hover {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.filter-panel-wrapper {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    grid-template-rows: 0fr;
+    width: 100%;
+    display: grid;
+    transition: grid-template-rows 0.3s ease;
+}
+
+.show-filter-panel {
+    border: 1px solid var(--main-border-color);
+    border-radius: 10px;
+    padding: 10px;
+    grid-template-rows: 1fr;
+}
+
+.filter-panel {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.filter-categories {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.filter-selector {
+    border: none;
+    padding: 2px 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid var(--main-border-color);
+    color: var(--header-3-sbtl-c);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-selector:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+}
+
+.selected {
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+/* FILTER TAGS */
+.filter-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-tag {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid var(--main-border-color);
+    border-radius: 10px;
+    width: 65px;
+    height: 25px;
+}
+
+.filter-tag-text {
+    font-size: var(--paragraph-mini-fs);
+    font-weight: var(--paragraph-mini-fw);
+    color: var(--paragraph-mini-c);
+}
+
+.x-icon {
+    cursor: pointer;
+    width: 7px;
+    fill: var(--paragraph-mini-c);
+}
