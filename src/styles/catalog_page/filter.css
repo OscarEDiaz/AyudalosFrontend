@@ -71,13 +71,13 @@
 }
 
 .filter-selector:hover {
+    border: 1px solid var(--primary-color);
     background-color: var(--primary-color);
     color: #fff;
-    border: none;
 }
 
 .selected {
-    border: none;
+    border: 1px solid var(--primary-color);
     background-color: var(--primary-color);
     color: #fff;
 }
@@ -86,6 +86,7 @@
     display: flex;
     gap: 10px;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 /* FILTER TAGS */
@@ -103,6 +104,20 @@
     border-radius: 10px;
     width: 65px;
     height: 25px;
+    cursor: pointer;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+.filter-tag:hover {
+    border: 1px solid var(--primary-color);
+}
+
+.selected {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: #fff;
 }
 
 .filter-tag-text {
