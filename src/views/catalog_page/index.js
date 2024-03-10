@@ -8,3 +8,5 @@ export * from './IniciativeCard';
 export * from './IniciativeList';
 export * from './Tag';
 export * from './FilterSelector';
+export * from './InitiativeRightCard';
+export * from './LoadingRightCard';
