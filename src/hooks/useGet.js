@@ -12,7 +12,7 @@ export const useGet = (url) => {
             setError('');
             setDataIsLoading(true);
             
-            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}${url}`);
+            const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}${url}`);
             const { dummy } = response.data;
             
             setDataIsLoading(false);
@@ -24,7 +24,7 @@ export const useGet = (url) => {
     }
 
     useEffect(() => {
-        console.log(process.env.REACT_APP_BACKEND_URL);
+        console.log(import.meta.env.VITE_BACKEND_URL);
     }, [])
 
 
