@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useGet } from "../../hooks/useGet";
 import { CatalogContext } from "./CatalogContext";
 
@@ -41,8 +41,21 @@ export const CatalogProvider = ({ children }) => {
     // Handle wich initiative is displayed to the right
     const [selectedInitiativeIndex, setSelectedInitiativeIndex] = useState(0);
 
+    // Handle current filter for filters
+    const [filters, setFilters] = useState([]);
+
     const changeDisplayedInitiative = (id) => {
         setSelectedInitiativeIndex(id);
+    };
+
+    const addFilter = (filter) => {
+        if (filter != '') setFilters([...filters, filter]);
+    };
+
+    const clearFilter = (filter) => {
+        const clearedData = filters.filter((currentFilter) => filter !== currentFilter);
+
+        setFilters(clearedData);
     }
 
     return (
@@ -54,7 +67,10 @@ export const CatalogProvider = ({ children }) => {
                     initiativesError,
                     selectedInitiativeIndex,
                     testInfo,
-                    changeDisplayedInitiative
+                    filters,
+                    changeDisplayedInitiative,
+                    addFilter,
+                    clearFilter
                 }
             }
         >
