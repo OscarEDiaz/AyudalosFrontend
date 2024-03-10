@@ -1,13 +1,25 @@
 .iniciative {
     display: flex;
     flex-direction: column;
+    background-color: #fff;
+    position: relative;
     height: 250px;
     width: 100%;
-    flex-shrink: 0;
     border: 1px solid var(--main-border-color);
+    flex-shrink: 0;
     border-radius: 20px;
     margin-top: 20px;
     padding: 20px;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.iniciative:hover {
+    border: 1px solid var(--primary-color);
+}
+
+.iniciative-toggled {
+    color: var(--primary-color) !important;
 }
 
 .iniciative-header {
@@ -37,6 +49,7 @@
     margin-top: 15px;
     font-size: var(--paragraph-fs);
     font-weight: normal;
+    flex-grow: 1;
     color: var(--paragraph-c);
     text-align: justify;
 }

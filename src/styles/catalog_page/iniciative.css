@@ -35,6 +35,7 @@
 
 .description {
     overflow-y: scroll;
+    width: 100%;
     height: 100%;
 }
 
@@ -66,4 +67,15 @@
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
     background-color: #fff;
+}
+
+.loading-card-right {
+    margin-top: 130px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--main-border-color);
+    padding: 10px;
+    border-radius: 10px;
 }
