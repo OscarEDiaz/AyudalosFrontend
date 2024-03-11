@@ -1,0 +1,53 @@
+.iniciative-list-main-frame {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.iniciative-list-h1 {
+    font-size: var(--header-2-fs);
+    font-weight: var(--header-2-fw);
+    color: var(--header-2-fc);
+    margin-top: 75px;
+}
+
+/* INICIATIVE CARDS */
+.iniciative-cards-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    margin-bottom: 30px;
+}
+
+.page-controller {
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-right: 10%;
+    width: 100%;
+    gap: 10px;
+    padding-bottom: 15px;
+}
+
+.page-selector {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 1px;
+    border-radius: 5px;
+    transition: border 0.2s linear;
+    cursor: pointer;
+}
+
+.page-selector:hover {
+    border: 1px solid var(--primary-color);
+}
+
+.number-input {
+    width: 30px;
+    padding: 1px;
+}

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 
 import { NavbarContext } from '../../context/navbar/NavbarContext';
 import { WindowContext } from '../../context/window/WindowContext';
@@ -11,12 +11,14 @@ import { MainAbout, OrganizationPerks, DonorPerks } from './index.js';
 import '../../styles/about_page/aboutPage.css';
 
 export const AboutPage = () => {
-    const [isDisabled, setIsDisabled] = useState(true);
-
     const { navbarSize } = useContext(NavbarContext);
     const { scrollY } = useContext(WindowContext);
 
     const upButton = useRef(null);
+
+    const moveUpButton = () => {
+        upButton.current.style.top = `calc(100vh - 150px + ${scrollY}px)`;
+    }
 
     useEffect(() => {
         if (scrollY > window.innerHeight) {
@@ -30,8 +32,9 @@ export const AboutPage = () => {
             
             upButton.current.style.display = 'none';
         }
-    }, [scrollY])
 
+        window.requestAnimationFrame(moveUpButton);
+    }, [scrollY])
 
     return (
         <div className="about-page-main-frame">
@@ -66,7 +69,6 @@ export const AboutPage = () => {
             <button
                 className="return"
                 ref={upButton}
-                style={{ 'top': `calc(100vh - 150px + ${scrollY}px)` }}
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
                 <AngleUp className='angle-up-icon' />
