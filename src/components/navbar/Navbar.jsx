@@ -46,7 +46,7 @@ export const Navbar = () => {
                         to={'/register'}
                         className={({ isActive }) => `navbar-item ${isActive ? 'navbar-item-active' : ''}`}
                     >
-                        Registro
+                        Contactanos
                     </NavLink>
                 </ul>
             </div>

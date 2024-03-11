@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { Navbar } from '../../components/navbar/Navbar';
+import '../../styles/register_page/registerPage.css';
 
 export const RegisterPage = () => {
   const form = useRef();
@@ -22,6 +24,9 @@ export const RegisterPage = () => {
   };
 
   return (
+    <div>
+      <Navbar />
+      <div className="form_holder">
     <form ref={form} onSubmit={sendEmail}>
       <label>Name</label>
       <input type="text" name="user_name" />
@@ -31,5 +36,7 @@ export const RegisterPage = () => {
       <textarea name="message" />
       <input type="submit" value="Send" />
     </form>
+    </div>
+    </div>
   );
 };

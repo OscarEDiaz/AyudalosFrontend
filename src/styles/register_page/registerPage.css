@@ -1,52 +1,51 @@
-.landing-page-main-frame {
+.form_holder{
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
-}
-
-.fuckshit {
-    background-color: white;
-    width:50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:space-around;
-}
-
-.Register-h1 {
-    font-size: var(--header-1-fs)
-}
-
-input {
+    margin: 0;
+  }
+  
+div {
+    text-align: center;
+  }
+  
+form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+input,
+textarea {
     width: 100%;
     padding: 8px;
+    margin-bottom: 16px;
     box-sizing: border-box;
-}
-
-.Register-btn {
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    width: 330px;
-    height: 48px;
-    background-color: var(--primary-color);
-    font-size: var(--header-3-fs);
-    font-weight: var(--header-3-fw);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+input[type="submit"] {
+    background-color: #F26069;
     color: #fff;
-    transition: all 0.5s ease;
-    margin-top: auto;
-}
-
-.Register-btn:hover {
-    background-color: #fff;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-}
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+input[type="submit"]:hover {
+    background-color: #F5747C;
+  }
+  
+  
