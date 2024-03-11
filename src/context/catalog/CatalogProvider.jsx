@@ -3,40 +3,8 @@ import { useGet } from "../../hooks/useGet";
 import { CatalogContext } from "./CatalogContext";
 
 export const CatalogProvider = ({ children }) => {
-    const { data: initiatives, dataIsLoading: initiativesAreLoading, error: initiativesError } = useGet('/api/initiatives');
-
-    const testInfo = [
-        {
-            initiativeTitle: 'Test 1',
-            organizationName: 'OrgName Test 1',
-            tags: ['tag1', 'tag2', 'tag3'],
-            smallDescription: 'Small description for Test 1',
-            detailedCard: {
-                initiativeTitle: 'Test 1 Details',
-                bigDescription: 'Detailed description for Test 1.'
-            }
-        },
-        {
-            initiativeTitle: 'Test 2',
-            organizationName: 'OrgName Test 2',
-            tags: ['tag4', 'tag5', 'tag6'],
-            smallDescription: 'Small description for Test 2',
-            detailedCard: {
-                initiativeTitle: 'Test 2 Details',
-                bigDescription: 'Detailed description for Test 2.'
-            }
-        },
-        {
-            initiativeTitle: 'Test 3',
-            organizationName: 'OrgName Test 3',
-            tags: ['tag7', 'tag8', 'tag9'],
-            smallDescription: 'Small description for Test 3',
-            detailedCard: {
-                initiativeTitle: 'Test 3 Details',
-                bigDescription: 'Detailed description for Test 3.'
-            }
-        }
-    ];
+    const { data: initiatives, dataIsLoading: initiativesAreLoading, error:initiativesError } = useGet('/api/initiatives');
+    const { data: tags, dataIsLoading: tagsAreLoading, error: tagsError } = useGet('/api/tags');
 
     // Handle wich initiative is displayed to the right
     const [selectedInitiativeIndex, setSelectedInitiativeIndex] = useState(0);
@@ -66,8 +34,8 @@ export const CatalogProvider = ({ children }) => {
                     initiativesAreLoading,
                     initiativesError,
                     selectedInitiativeIndex,
-                    testInfo,
                     filters,
+                    tags,
                     changeDisplayedInitiative,
                     addFilter,
                     clearFilter
