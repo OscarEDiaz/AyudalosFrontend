@@ -23,7 +23,6 @@ export const Navbar = () => {
                 <p className='navbar-logo'>
                     Ayúdalos <Heart className='heart-icon' />
                 </p>
-                <p>Page under construction</p>
                 <ul className="navbar-items-list">
                     <NavLink
                         to={'/'}
