@@ -7,7 +7,9 @@ import { CatalogContext } from "../../context/catalog/CatalogContext.jsx";
 import '../../styles/catalog_page/iniciativeCard.css';
 
 export const IniciativeCard = ({ data, index }) => {
-    const { initiativeTitle, organizationName, tags, smallDescription } = data;
+    const { initiativeName, organizationName, tags, smallDescription, organizationLogoUrl } = data;
+
+    console.log(organizationLogoUrl);
 
     const { changeDisplayedInitiative, selectedInitiativeIndex } = useContext(CatalogContext);
     const [isToggled, setIsToggled] = useState(selectedInitiativeIndex === index);
@@ -35,10 +37,10 @@ export const IniciativeCard = ({ data, index }) => {
         >
             <div className="iniciative-header">
                 <div>
-                    <p className={`iniciative-h3 ${isToggled ? 'iniciative-toggled' : ''}`}>{initiativeTitle}</p>
+                    <p className={`iniciative-h3 ${isToggled ? 'iniciative-toggled' : ''}`}>{initiativeName}</p>
                     <p className="iniciative-sub-h3">{organizationName}</p>
                 </div>
-                <img className="org-logo" src="https://cdn.pixabay.com/photo/2017/09/25/13/14/dog-2785076_1280.jpg" alt="organization logo" />
+                <img className="org-logo" src={organizationLogoUrl} alt="organization logo" />
             </div>
             <p className="iniciative-summary">{smallDescription}</p>
             <div className="tags">

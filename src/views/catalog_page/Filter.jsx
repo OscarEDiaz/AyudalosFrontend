@@ -1,12 +1,15 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 
 import { FilterSelector } from "./FilterSelector";
 
+import { CatalogContext } from "../../context/catalog/CatalogContext";
+
 import '../../styles/catalog_page/filter.css';
 
+
 export const Filter = () => {
-    const [isToggled, setIsToggled] = useState(false)
-    const testFilters = ['tag1', 'tag2', 'tag3', 'tag4', 'tag5', 'tag6', 'tag7', 'tag8', 'tag9']
+    const { tags } = useContext(CatalogContext);
+    const [isToggled, setIsToggled] = useState(false);
 
     return (
         <div className="filter-main-frame">
@@ -20,7 +23,7 @@ export const Filter = () => {
             <div className={`filter-panel-wrapper ${ isToggled ? 'show-filter-panel' : '' }`}>
                 <div className='filter-panel'>
                     <div className="filters">
-                        { testFilters.map((tagName, i) => <FilterSelector key={i} tagName={tagName} />) }
+                        { tags.map((tag, i) => <FilterSelector key={i} tagName={tag.name} />) }
                     </div>
                 </div>
             </div>

@@ -1,12 +1,13 @@
+import axios from 'axios';
 
 export const InitiativeRightCard = ({ cardData }) => {
-    const { detailedCard: { initiativeTitle, bigDescription } } = cardData;
+    const { detailedCard: { initiativeTitle, bigDescription, bannerUrl, accountId, priceId } } = cardData;
 
     return (
         <div className='iniciative-main-frame' >
             <div
                 className="banner"
-                style={{ 'backgroundImage': 'url(https://cdn.pixabay.com/photo/2017/09/25/13/14/dog-2785076_1280.jpg)' }}
+                style={{ 'backgroundImage': `url(${bannerUrl})` }}
             >
                 <div className="faded-bg">
                     <h2>{initiativeTitle}</h2>
@@ -18,9 +19,11 @@ export const InitiativeRightCard = ({ cardData }) => {
                     {bigDescription}
                 </p>
             </div>
-            <button className="iniciative-donate-btn">
-                <h3>Donar</h3>
-            </button>
+            <form action={`${import.meta.env.VITE_BACKEND_URL}/create-checkout-session`} method="post">
+                <button className="iniciative-donate-btn" type='submit'>
+                    <h3>Donar</h3>
+                </button>
+            </form>
         </div>
     )
 }

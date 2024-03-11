@@ -7,28 +7,30 @@ import { CatalogContext } from '../../context/catalog/CatalogContext.jsx';
 import '../../styles/catalog_page/iniciativeList.css';
 
 export const IniciativeList = ({ initiatives }) => {
-    const [currentInitiatives, setcurrentInitiatives] = useState(initiatives);
+    const [currentInitiatives, setcurrentInitiatives] = useState([]);
     const { filters } = useContext(CatalogContext);
 
     useEffect(() => {
         if (filters.length > 0) {
             const filteredData = initiatives.filter((initiative) => {
-                return initiative.tags.some(tag => filters.includes(tag));
+                return initiative.tags.some(tag => filters.includes(tag.name));
             });                 
-
-            console.log(filteredData)
 
             setcurrentInitiatives(filteredData);
         } else {
             setcurrentInitiatives(initiatives);
         }
-    }, [filters])
+    }, [filters]);
+
+    useEffect(() => {
+        setcurrentInitiatives(initiatives);
+    }, [initiatives]);
 
     return (
         <div className="iniciative-list-main-frame">
             <Filter />
             <div className="filter-tags-container">
-                { filters.map((tag, i) => <FilterTag key={i} tagName={tag} />) }
+                { filters.map((name, i) => <FilterTag key={i} tagName={name} />) }
             </div>
             <div className="iniciative-cards-container">
                 {

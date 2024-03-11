@@ -13,10 +13,12 @@ export const useGet = (url) => {
             setDataIsLoading(true);
             
             const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}${url}`);
-            const { dummy } = response.data;
-            
+            const data = response.data;
+
+            console.log(data)
+
             setDataIsLoading(false);
-            setData(dummy);
+            setData(data);
         } catch (error) {
             setError('Problem loading initiatives')
             setDataIsLoading(false);
@@ -24,7 +26,7 @@ export const useGet = (url) => {
     }
 
     useEffect(() => {
-        console.log(import.meta.env.VITE_BACKEND_URL);
+        getData();
     }, [])
 
 

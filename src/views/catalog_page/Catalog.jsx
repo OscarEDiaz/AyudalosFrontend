@@ -6,7 +6,7 @@ import { CatalogContext } from "../../context/catalog/CatalogContext.jsx";
 
 export const Catalog = ({ navbarSize }) => {
     // TODO: fetch filter tags
-    const { testInfo:initiatives } = useContext(CatalogContext);
+    const { initiatives } = useContext(CatalogContext);
 
     return (
         <div className="catalog">
