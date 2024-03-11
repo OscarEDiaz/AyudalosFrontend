@@ -1,0 +1,77 @@
+.iniciative {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    position: relative;
+    height: 250px;
+    width: 100%;
+    border: 1px solid var(--main-border-color);
+    flex-shrink: 0;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.iniciative:hover {
+    border: 1px solid var(--primary-color);
+}
+
+.iniciative-toggled {
+    color: var(--primary-color) !important;
+}
+
+.iniciative-header {
+    display: flex;
+    height: 46px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.iniciative-h3 {
+    font-size: var(--header-3-fs);
+    font-weight: var(--header-3-fw);
+    color: var(--header-3-c);
+}
+
+.iniciative-sub-h3 {
+    font-size: var(--header-3-sbtl-fs);
+    font-weight: var(--header-3-sbtl-fw);
+    color: var(--header-3-sbtl-c);
+}
+
+.org-logo {
+    height: 100%;
+}
+
+.iniciative-summary {
+    margin-top: 15px;
+    font-size: var(--paragraph-fs);
+    font-weight: normal;
+    flex-grow: 1;
+    color: var(--paragraph-c);
+    text-align: justify;
+}
+
+.tags {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: yellowgreen;
+    height: 28px;
+    min-width: 80px;
+}
+
+.tag-txt {
+    font-size: var(--header-3-sbtl-fs);
+    font-weight: var(--header-3-sbtl-fw);
+}
