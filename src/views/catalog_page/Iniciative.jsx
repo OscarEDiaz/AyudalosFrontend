@@ -12,7 +12,7 @@ export const Iniciative = () => {
     useEffect(() => {
         if (selectedInitiativeIndex > -1) setcardData(initiatives[selectedInitiativeIndex]);
         else setcardData(null);
-    }, [selectedInitiativeIndex])
+    }, [selectedInitiativeIndex, initiatives])
 
     return cardData ? <InitiativeRightCard cardData={cardData} /> : <LoadingRightCard />;
 }
