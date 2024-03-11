@@ -4,6 +4,7 @@ import { AboutPage } from "./views/about_page/AboutPage";
 import { CatalogPage } from "./views/catalog_page/CatalogPage";
 import { LandingPage } from "./views/landing_page/LandingPage";
 import { PruebaPage } from "./views/prueba_page/PruebaPage";
+import { RegisterPage } from "./views/register_page/RegisterPage"
 
 export const routes = [
     {
@@ -26,6 +27,10 @@ export const routes = [
             {
                 path: '/prueba',
                 element: <PruebaPage />
+            },
+            {
+                path:'/register',
+                element: <RegisterPage />
             }
         ]
     }

@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import React, { useState} from "react";
 import { Navbar } from '../../components/navbar/Navbar';
-import { initMercadoPago, CardPayment } from "@mercadopago/sdk-react";
 import axios from 'axios';
 
 
