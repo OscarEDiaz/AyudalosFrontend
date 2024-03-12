@@ -6,11 +6,11 @@
     margin: 0;
   }
   
-div {
-    text-align: center;
-  }
+.form-div {
+   text-align: center;
+}
   
-form {
+.register-form {
     width: 300px;
     padding: 20px;
     border: 1px solid #ccc;
