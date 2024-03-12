@@ -14,7 +14,7 @@ export const LandingPage = () => {
             <main className='hero-banner-main-frame'>
                 <div className="hero-banner">
                     <div className="hero-banner-txt">
-                        <h1 className='hero-banner-h1'>Un solo proposito: el cambio <span className='text-gradient'>Ayudalos</span> tranforma vidas</h1>
+                        <h1 className='hero-banner-h1'>Un solo propósito: el cambio <span className='text-gradient'>Ayudalos</span> tranforma vidas</h1>
                         <Hand className='hand-icon' />
                     </div>
                     <button 
